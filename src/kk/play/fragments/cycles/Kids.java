@@ -51,7 +51,7 @@ public class Kids extends Fragment {
 		CyclesDBHandler gentsHandler=new CyclesDBHandler(getActivity());
 		List<Cycles> cycleList=gentsHandler.getCyclesByType(type);		
 
-		//for(Cycles cycle:cycleList){
+		for(Cycles cycle:cycleList){
 		TableRow row=new TableRow(getActivity());
 		
 		ImageView itemImage=new ImageView(getActivity());
@@ -66,7 +66,7 @@ public class Kids extends Fragment {
 		row.addView(itemName);
 		row.addView(itemImage);
 		layout.addView(row);
-		//}
+		}
 		return rootView;
 	}
 

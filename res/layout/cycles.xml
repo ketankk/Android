@@ -4,18 +4,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView 
-       android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="asjhgsajhgsajhsga"
-       />
+    
     
 <TableLayout 
     android:id="@+id/table"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+     
+     <TableRow android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView android:text="jjjj"
+            android:src="@drawable/plus"
+            android:layout_width="20dp"
+    android:layout_height="20dp"/>
     
+    </TableRow>
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView android:text="jjjj"
+            android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
     
+    </TableRow>
     
 </TableLayout>
 </LinearLayout>
