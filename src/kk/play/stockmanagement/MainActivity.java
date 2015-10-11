@@ -1,7 +1,7 @@
 package kk.play.stockmanagement;
 
-import kk.play.adapters.CyclesAdapter;
-import kk.play.database.MySQLiteHelper;
+import kk.play.stockmanagement.adapters.CyclesController;
+import kk.play.stockmanagement.database.MySQLiteHelper;
 import android.app.SearchManager;
 import android.app.AppOpsManager.OnOpChangedListener;
 import android.content.Context;
@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-	CyclesAdapter cycleAdapter;
+	CyclesController cycleAdapter;
 	ViewPager mViewPager;
 
 	@Override
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		cycleAdapter = new CyclesAdapter(getSupportFragmentManager());
+		cycleAdapter = new CyclesController(getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(cycleAdapter);
 
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 		if (searchView != null) {
 			searchView.setSearchableInfo(searchManager
 					.getSearchableInfo(getComponentName()));
-			Log.d("H", "gg");
 		}
 		return super.onCreateOptionsMenu(menu);
 
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 
 		Intent addItem=new Intent(this,AddItem.class);
+		//Add Item Activity called
 		startActivity(addItem);
 		return super.onOptionsItemSelected(item);
 	}

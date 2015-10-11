@@ -12,5 +12,7 @@
     <string name="search_hint">Search hint</string>
     <string name="title_activity_add_item">AddItem</string>
     <string name="titleadditem">Add Item</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="cycle">Cycle</string>
 
 </resources>

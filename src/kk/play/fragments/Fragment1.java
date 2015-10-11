@@ -1,8 +1,8 @@
 package kk.play.fragments;
 
-import kk.play.database.MySQLiteHelper;
 import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
+import kk.play.stockmanagement.database.MySQLiteHelper;
 import android.app.ActionBar.LayoutParams;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;

@@ -1,11 +1,12 @@
 package kk.play.stockmanagement;
 
 import android.app.Activity;
+import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class SearchResultsActivity extends Activity{
+public class SearchResultsActivity extends ListActivity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
