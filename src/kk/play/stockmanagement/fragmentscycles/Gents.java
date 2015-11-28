@@ -2,23 +2,14 @@ package kk.play.stockmanagement.fragmentscycles;
 
 import java.util.List;
 
-import kk.play.fragments.CyclesSalesDBHandler;
-import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
+import kk.play.stockmanagement.controller.CompanyListController;
 import kk.play.stockmanagement.database.CyclesItemDBHandler;
-import kk.play.stockmanagement.entity.Cycle;
-import android.app.ActionBar.LayoutParams;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
 
 public class Gents extends Fragment {
 

@@ -25,7 +25,7 @@
         android:screenOrientation="portrait"
         android:theme="@style/MyTheme" >
         <activity
-            android:name=".StartActivity"
+            android:name=".activities.StartActivity"
             android:label="@string/title_activity_start" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
 
             <!--
@@ -78,15 +78,12 @@
             android:label="@string/title_activity_report" >
         </activity>
         <activity
-            android:name=".ShowAllCycles"
+            android:name=".activities.ShowAllCycles"
             android:label="@string/title_activity_show_all" >
         </activity>
-        <activity
-            android:name=".Reportgraph1Activity"
-            android:label="@string/title_activity_reportgraph1" >
-        </activity>
+       
         <receiver
-            android:name=".BroadCastReceiver"
+            android:name="kk.play.stockmanagement.utils.BroadCastReceiver"
             android:enabled="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
@@ -95,8 +92,7 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
             </intent-filter>
         </receiver>
-        <service
-              android:name=".StockManagementService"
+        <service android:name=".StockManagementService"
             
              ></service>
     </application>

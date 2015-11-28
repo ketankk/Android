@@ -1,12 +1,9 @@
 package kk.play.stockmanagement.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import kk.play.stockmanagement.database.CyclesItemDBHandler;
-import kk.play.stockmanagement.database.MysqlSynchronizer;
 import kk.play.stockmanagement.entity.Cycle;
 import kk.play.stockmanagement.interfaces.VolleyCallBack;
 
@@ -14,10 +11,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
-import android.widget.TextView;
 
 import com.android.volley.Request.Method;
 import com.android.volley.Response;

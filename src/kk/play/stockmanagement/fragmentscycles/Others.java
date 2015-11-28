@@ -2,10 +2,11 @@ package kk.play.stockmanagement.fragmentscycles;
 
 import java.util.List;
 
-import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
+import kk.play.stockmanagement.controller.CompanyListController;
 import kk.play.stockmanagement.database.CyclesItemDBHandler;
 import kk.play.stockmanagement.entity.Cycle;
+import kk.play.stockmanagement.utils.ImageDownload;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;

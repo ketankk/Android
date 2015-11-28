@@ -2,7 +2,6 @@ package kk.play.stockmanagement.adapters;
 
 import java.util.List;
 
-import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
 import kk.play.stockmanagement.controller.ApplicationController;
 import kk.play.stockmanagement.database.CyclesItemDBHandler;
@@ -11,9 +10,7 @@ import kk.play.stockmanagement.utils.EditItem;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.support.v4.view.ViewPager.LayoutParams;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;

@@ -3,8 +3,7 @@ package kk.play.stockmanagement.adapters;
 import java.util.List;
 
 import kk.play.stockmanagement.R;
-import kk.play.stockmanagement.ShowAllCycles;
-import kk.play.stockmanagement.StartActivity;
+import kk.play.stockmanagement.activities.ShowAllCycles;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +14,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CompanyCustomListAdapter extends BaseAdapter {
 

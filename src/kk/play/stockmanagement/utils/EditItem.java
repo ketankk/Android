@@ -3,8 +3,8 @@ package kk.play.stockmanagement.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import kk.play.stockmanagement.MainActivity;
 import kk.play.stockmanagement.R;
+import kk.play.stockmanagement.activities.MainActivity;
 import kk.play.stockmanagement.database.CyclesItemDBHandler;
 import kk.play.stockmanagement.entity.Cycle;
 import android.app.Activity;
