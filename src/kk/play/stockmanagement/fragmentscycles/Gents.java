@@ -2,10 +2,11 @@ package kk.play.stockmanagement.fragmentscycles;
 
 import java.util.List;
 
+import kk.play.fragments.CyclesSalesDBHandler;
 import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
-import kk.play.stockmanagement.database.CyclesDBHandler;
-import kk.play.stockmanagement.entity.Cycles;
+import kk.play.stockmanagement.database.CyclesItemDBHandler;
+import kk.play.stockmanagement.entity.Cycle;
 import android.app.ActionBar.LayoutParams;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -47,11 +48,13 @@ public class Gents extends Fragment {
 		// Populate View
 
 		// Get list of all cycles of type=Gents;
-		CyclesDBHandler gentsHandler = new CyclesDBHandler(getActivity());
-		List<Cycles> cycleList = gentsHandler.getCyclesByType(type);
-		ViewController controller=new ViewController();
-		controller.createView(cycleList, rootView,getActivity());
+		CyclesItemDBHandler gentsHandler = new CyclesItemDBHandler(getActivity());
+List<String> companies =gentsHandler.getListOfCompaniesBytype(type);
+		
+		CompanyListController controller=new CompanyListController();
+		controller.createView(companies, rootView,getActivity(),type);
 
+		//controller.createView(cycleList, rootView,getActivity());
 		
 		
 		return rootView;

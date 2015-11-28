@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kk.play.stockmanagement"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="3"
+    android:versionName="2.0" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -10,8 +10,16 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
     <application
+        android:name="kk.play.stockmanagement.controller.ApplicationController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:screenOrientation="portrait"
@@ -23,19 +31,28 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!--
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <category android:name="android.intent.category.VIEW" />
+                -->
+
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
+            -->
         </activity>
         <activity
-            android:name=".SearchResultsActivity"
+            android:name=".utils.SearchResultsActivity"
             android:label="@string/app_name" >
             <meta-data
                 android:name="android.app.searchable"
@@ -46,10 +63,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddItem"
+            android:name=".utils.AddItem"
             android:label="@string/title_activity_add_item" >
         </activity>
+
         
+
+        <activity
+            android:name=".utils.EditItem"
+            android:label="@string/title_activity_edit_item" >
+        </activity>
+        <activity
+            android:name=".utils.DailyReport"
+            android:label="@string/title_activity_report" >
+        </activity>
+        <activity
+            android:name=".ShowAllCycles"
+            android:label="@string/title_activity_show_all" >
+        </activity>
+        <activity
+            android:name=".Reportgraph1Activity"
+            android:label="@string/title_activity_reportgraph1" >
+        </activity>
+        <receiver
+            android:name=".BroadCastReceiver"
+            android:enabled="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+            </intent-filter>
+        </receiver>
+        <service
+              android:name=".StockManagementService"
+            
+             ></service>
     </application>
 
 </manifest>

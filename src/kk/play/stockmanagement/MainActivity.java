@@ -1,7 +1,8 @@
 package kk.play.stockmanagement;
 
-import kk.play.stockmanagement.adapters.CyclesController;
-import kk.play.stockmanagement.database.MySQLiteHelper;
+import kk.play.fragments.MySQLiteHelper;
+import kk.play.stockmanagement.adapters.FragmentsController;
+import kk.play.stockmanagement.utils.AddItem;
 import android.app.SearchManager;
 import android.app.AppOpsManager.OnOpChangedListener;
 import android.content.Context;
@@ -20,7 +21,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-	CyclesController cycleAdapter;
+	FragmentsController cycleAdapter;
 	ViewPager mViewPager;
 
 	@Override
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		cycleAdapter = new CyclesController(getSupportFragmentManager());
+		cycleAdapter = new FragmentsController(getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(cycleAdapter);
 

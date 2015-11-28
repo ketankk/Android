@@ -4,8 +4,8 @@ import java.util.List;
 
 import kk.play.stockmanagement.ImageDownload;
 import kk.play.stockmanagement.R;
-import kk.play.stockmanagement.database.CyclesDBHandler;
-import kk.play.stockmanagement.entity.Cycles;
+import kk.play.stockmanagement.database.CyclesItemDBHandler;
+import kk.play.stockmanagement.entity.Cycle;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,11 +41,13 @@ public class Others extends Fragment{
 				false);
 		
 		
-		CyclesDBHandler gentsHandler = new CyclesDBHandler(getActivity());
-		List<Cycles> cycleList = gentsHandler.getCyclesByType(type);
-		ViewController controller=new ViewController();
+		CyclesItemDBHandler gentsHandler = new CyclesItemDBHandler(getActivity());
+		List<Cycle> cycleList = gentsHandler.getCyclesByType(type);
+		List<String> companies = gentsHandler.getListOfCompaniesBytype(type);
 
-		controller.createView(cycleList, rootView,getActivity());
+		CompanyListController controller=new CompanyListController();
+
+		controller.createView(companies, rootView,getActivity(),type);
 
 		return rootView;
 	}
